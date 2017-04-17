@@ -1,0 +1,13 @@
+//creaza mapa "fonts" in dosarul de lucru
+//web-font-generator.com --> upload "file.ttf" --> click al 2-lea checkbox --> Generate
+//toate fisierele downlodate pune in mapa "fonts"
+
+=font-face($folder, $file)
+	@font-face
+  	src: url('#{$folder}#{$file}.eot?#iefix') format('embedded-opentype'), url('#{$folder}#{$file}.woff') format('woff'), url('#{$folder}#{$file}.ttf')  format('truetype'), url('#{$folder}#{$file}.svg##{$file}') format('svg')
+  	font-weight: normal
+  	font-style: normal
+  	font-family: $file
+//in styles.sass or project.sass ->> +font-face("../fonts/", "PlanetKosmos")
+//p {font-family: PlanetKosmos}
+
