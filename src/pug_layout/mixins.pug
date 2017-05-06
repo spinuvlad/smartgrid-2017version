@@ -1,0 +1,26 @@
+mixin news(title)
+	span.news-title= title
+	.news-text
+		if block
+			block
+		else
+			p Nu exista text
+
+mixin link(href,name)
+	a(href= href)= name
+
+
+mixin olist(...items)
+	ol
+		each item in items
+			li= item
+
+mixin ulist(...items)
+	ul
+		each item in items
+			li= item
+
+mixin social(ulclass,...items)
+	ul(class="" +ulclass)
+		each item in items
+			li(class="social-link social-link__" +item)= item
